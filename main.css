@@ -1,0 +1,44 @@
+/* Định dạng thẻ body */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Định dạng thẻ tiêu đề */
+header {
+    background-color: #f8f9fa;
+}
+
+/* Định dạng thẻ điều hướng */
+nav {
+    background-color: #343a40;
+}
+
+/* Định dạng thẻ chính */
+main {
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+/* Định dạng thẻ chân trang */
+footer {
+    background-color: #f1f1f1;
+}
+
+/* Định dạng thẻ li */
+li {
+    display: inline-block;
+    width: 100px;
+}
+
+/* Định dạng thẻ h1 */
+h1 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+/* Định dạng thẻ p */
+p {
+    line-height: 1.6;
+}
