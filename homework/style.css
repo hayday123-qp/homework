@@ -1,0 +1,72 @@
+/* Định dạng thẻ body */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Định dạng thẻ tiêu đề */
+header {
+    background-color: #f8f9fa;
+}
+
+/* Định dạng thẻ điều hướng */
+nav {
+    background-color: #343a40;
+    display: inline-block;
+    width: 80%;
+}
+
+/* Định dạng thẻ chính */
+main {
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+/* Định dạng thẻ chân trang */
+footer {
+    background-color: #f1f1f1;
+}
+
+/* Định dạng thẻ li */
+li {
+    display: inline-block; /* Hiển thị dạng khối nội tuyến */
+    width: 100px; /* Chiều rộng là 100px */
+}
+
+/* Định dạng thẻ h1 */
+h1 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+/* Định dạng thẻ p */
+p {
+    line-height: 1.6;
+}
+
+/* Định dạng hình ảnh trong thanh điều hướng */
+nav img {
+    width: 10%;
+}
+
+/* Định dạng lớp lưới */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+/* Định dạng hình ảnh trong lớp lưới */
+.grid img {
+    width: 100%;
+}
+
+/* Định dạng lớp flex */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
