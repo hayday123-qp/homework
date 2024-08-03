@@ -1,0 +1,95 @@
+/* Định dạng thẻ body */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Định dạng thẻ tiêu đề */
+header {
+    background-color: #f8f9fa;
+}
+
+/* Định dạng thẻ điều hướng */
+.flex-nav {
+    background-color: #343a40;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+/* Định dạng thẻ chính */
+main {
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+/* Định dạng thẻ chân trang */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Định dạng thẻ li */
+li {
+    display: inline-block;
+    width: 100px;
+}
+
+/* Định dạng thẻ h1 */
+h1 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+/* Định dạng thẻ p */
+p {
+    line-height: 1.6;
+}
+
+/* Định dạng hình ảnh */
+img {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+/* Định dạng liên kết "Skip to Main Content" */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Định dạng lớp lưới */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Định dạng pseudo-class hover */
+a:hover {
+    color: red;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Sử dụng nth-child */
+.grid img:nth-child(odd) {
+    border-radius: 15px;
+}
+
+.grid img:nth-child(even) {
+    border-radius: 30px;
+}
