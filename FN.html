@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <style>
+        #image {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            line-height: 300px;
+            margin-bottom: 20px;
+        }
+        .preview {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image">Hover over an image below to display here</div>
+    <img class="preview" src="https://tse1.mm.bing.net/th?id=OIP.cUuD1xJjJQkcjfkbOkrF8QHaE_&pid=Api&P=0&h=180" alt="Image 1" tabindex="0">
+    <img class="preview" src="https://tse2.mm.bing.net/th?id=OIP.mwXBsgCgcB0DbYvS5UM1oQHaPO&pid=Api&P=0&h=180" alt="Image 2" tabindex="0">
+    <img class="preview" src="https://tse2.mm.bing.net/th?id=OIP.K2rJJQDY9q1s2KJA6vX8nwHaEo&pid=Api&P=0&h=180" alt="Image 3" tabindex="0">
+    <img class="preview" src="https://tse4.mm.bing.net/th?id=OIP.Xn7vlgvT8Y2eBUhzQlgSCQHaEK&pid=Api&P=0&h=180" alt="Image 4" tabindex="0">
+    <img class="preview" src="https://tse1.mm.bing.net/th?id=OIP.qFfsipwtOUzHih7SCLPPXAHaEK&pid=Api&P=0&h=180" alt="Image 5" tabindex="0">
+    <img class="preview" src="https://tse4.mm.bing.net/th?id=OIP.QC1RGRrkYEDYN6NPePDBbAHaEK&pid=Api&P=0&h=180" alt="Image 6" tabindex="0">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll(".preview");
+            const imageDiv = document.getElementById("image");
+
+            function upDate(previewPic) {
+                console.log("Event triggered");
+                console.log("Alt text: " + previewPic.alt);
+                console.log("Source: " + previewPic.src);
+
+                imageDiv.style.backgroundImage = `url(${previewPic.src})`;
+                imageDiv.textContent = previewPic.alt;
+            }
+
+            function unDo() {
+                imageDiv.style.backgroundImage = "url('')";
+                imageDiv.textContent = "Hover over an image below to display here";
+            }
+
+            function addTabFocus() {
+                console.log("Tab focus added");
+            }
+
+            function onLoadFunction() {
+                console.log("Page loaded");
+            }
+
+            images.forEach(img => {
+                img.addEventListener("mouseover", function() {
+                    upDate(img);
+                });
+
+                img.addEventListener("mouseout", function() {
+                    unDo();
+                });
+
+                img.addEventListener("focus", function() {
+                    upDate(img);
+                });
+
+                img.addEventListener("blur", function() {
+                    unDo();
+                });
+            });
+
+            window.addEventListener("load", onLoadFunction);
+        });
+    </script>
+</body>
+</html>
