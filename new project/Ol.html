@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview</title>
+    <style>
+        #image {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            background-image: url('');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image">Di chuột qua hình ảnh bên dưới để hiển thị tại đây</div>
+    <img class="preview" src="https://tse3.mm.bing.net/th?id=OIP.EfzCAxXDMLM2NqJ9N5juiAHaEK&pid=Api&P=0&h=180" alt="Image 1">
+    <img class="preview" src="https://tse3.mm.bing.net/th?id=OIP.tLiApSxetPpA1MdzC8OGngHaFB&pid=Api&P=0&h=180" alt="Image 2">
+    <img class="preview" src="https://tse1.mm.bing.net/th?id=OIP.BYlH6rVAiypmE74_Y0_fYAHaE0&pid=Api&P=0&h=180" alt="Image 3">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll(".preview");
+            const imageDiv = document.getElementById("image");
+
+            function upDate(previewPic) {
+                console.log("Event triggered");
+                console.log("Alt text: " + previewPic.alt);
+                console.log("Source: " + previewPic.src);
+
+                imageDiv.style.backgroundImage = `url(${previewPic.src})`;
+                imageDiv.textContent = previewPic.alt;
+            }
+
+            function unDo() {
+                imageDiv.style.backgroundImage = "url('')";
+                imageDiv.textContent = "Di chuột qua hình ảnh bên dưới để hiển thị tại đây";
+            }
+
+            images.forEach(img => {
+                img.addEventListener("mouseover", function() {
+                    upDate(img);
+                });
+
+                img.addEventListener("mouseout", function() {
+                    unDo();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
